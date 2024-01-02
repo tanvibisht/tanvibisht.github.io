@@ -23,11 +23,14 @@ body {
 nav {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center; 
+    align-items: center; 
     height: 100vh;
     box-sizing: border-box;
-    width: max-content;  
-    align-self: flex-start; 
+    width: max-content;
+    margin-left: auto; 
+    padding: 0 20px;
+    overflow: hidden; 
 }
 
 nav a {
@@ -40,6 +43,7 @@ nav a {
 
 nav a:hover {
     transform: scale(1.1);
+    overflow: hidden; 
 }
 
 @keyframes float {
