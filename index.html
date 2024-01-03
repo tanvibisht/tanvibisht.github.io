@@ -21,7 +21,6 @@
             font-size: 40px;
             font-weight: bold;
             color: #fff;
-            animation: float 3s ease-in-out infinite;
             margin-bottom: 10px; 
         }
 
@@ -101,7 +100,7 @@
             if (index < text.length) {
                 subtitleElement.innerHTML += text.charAt(index);
                 index++;
-                setTimeout(typeWriter, 100); 
+                setTimeout(typeWriter, 60); 
             } else {
                 subtitleElement.style.borderRight = 'none';
             }
