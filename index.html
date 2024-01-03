@@ -27,12 +27,16 @@
 
         .subtitle {
             font-family: 'Courier New', Courier, monospace;
-            color: #d4a1cb; 
-            font-size: 20px; 
-            padding: 0 20px; 
-            box-sizing: border-box; 
-            display: inline-block; 
+            color: #d4a1cb;
+            font-size: 20px;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: inline-block;
             border-right: .15em solid #d4a1cb;
+            max-width: 65%; 
+            margin: 0 auto; 
+            white-space: nowrap; 
+            overflow: hidden; 
         }
 
         @keyframes float {
@@ -59,7 +63,7 @@
         .nav-bar {
             position: absolute;
             right: 0;
-            top: 45%;
+            top: 50%;
             transform: translateY(-50%);
             list-style-type: none;
             padding: 0;
@@ -90,7 +94,7 @@
 
     <script>
         const subtitleElement = document.querySelector('.subtitle');
-        const text = '> Currently an undergraduate student at the University of Toronto<br>pursuing Computer Science and Statistics'; 
+        const text = '> Currently an undergraduate student at the University of Toronto pursuing Computer Science and Statistics'; 
 
         let index = 0;
         function typeWriter() {
