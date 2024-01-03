@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanvi Bisht</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="main-content">
-        <div class="floating-name">Tanvi Bisht</div>
-        <div id="firefly-container"></div>
+    <div class="floating-name">Tanvi Bisht</div>
+    <div class="subtitle typing"></div> 
+    <ul class="nav-bar">
+        <li class="nav-item">Home</li>
+        <li class="nav-item">About</li>
+        <li class="nav-item">Projects</li>
+        <li class="nav-item">Contact Me</li>
+    </ul>
 
-    </div>
+    <script>
+        const subtitleElement = document.querySelector('.subtitle');
+        const text = '> Currently an undergraduate student at the University of Toronto pursuing Computer Science and Statistics'; // Sample subtitle text
 
-<nav>
-    <a href="./index.html">Home</a>
-    <a href="./about.html">About</a>
-    <a href="./projects.html">Projects</a>
-    <a href="./contact.html">Contact Me</a>
-</nav>
-    <script src="createFireflies.js"></script>
+        let index = 0;
+        function typeWriter() {
+            if (index < text.length) {
+                subtitleElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100); 
+            } else {
+                subtitleElement.style.borderRight = 'none';
+            }
+        }
+
+        typeWriter();
+    </script>
 </body>
-
 </html>
