@@ -59,7 +59,7 @@
         .nav-bar {
             position: absolute;
             right: 0;
-            top: 50%;
+            top: 45%;
             transform: translateY(-50%);
             list-style-type: none;
             padding: 0;
@@ -90,16 +90,15 @@
 
     <script>
         const subtitleElement = document.querySelector('.subtitle');
-        const text = '> Currently an undergraduate student at the University of Toronto pursuing Computer Science and Statistics'; 
+        const text = '> Currently an undergraduate student at the University of Toronto<br>pursuing Computer Science and Statistics'; 
 
         let index = 0;
         function typeWriter() {
             if (index < text.length) {
-                subtitleElement.textContent += text.charAt(index);
+                subtitleElement.innerHTML += text.charAt(index);
                 index++;
                 setTimeout(typeWriter, 100); 
             } else {
-                
                 subtitleElement.style.borderRight = 'none';
             }
         }
