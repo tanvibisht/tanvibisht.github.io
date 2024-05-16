@@ -1,0 +1,75 @@
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #011121;
+            overflow: hidden;
+            position: relative;
+            color: #fff;
+            text-align: center; 
+        }
+
+        .floating-name {
+            font-size: 40px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 10px; 
+        }
+
+        .subtitle {
+            font-family: 'Courier New', Courier, monospace;
+            color: #d4a1cb;
+            font-size: 20px;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: inline-block;
+            border-right: .15em solid #d4a1cb;
+            max-width: 65%; 
+            margin: 0 auto; 
+            white-space: nowrap; 
+            overflow: hidden; 
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .typing {
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+            white-space: pre-wrap;
+            overflow: visible;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #d4a1cb; }
+        }
+
+        .nav-bar {
+            position: sticky;
+            overflow: visible;
+            list-style-type: none;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .nav-item {
+            margin: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item:hover {
+            color: #ddd;
+        }
