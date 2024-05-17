@@ -10,6 +10,7 @@ body {
     color: #fff;
     text-align: center; 
     font-family: 'Courier New', Courier, monospace; 
+    position: relative;
 }
 
 .nav-bar {
@@ -22,7 +23,6 @@ body {
     padding: 10px 0;
     list-style-type: none;
     margin: 0;
-    border-bottom: 1px solid #333; 
 }
 
 .nav-item {
@@ -32,6 +32,18 @@ body {
     transition: color 0.3s ease;
 }
 
+.blinking-text{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace; 
+    opacity: 0;
+    animation-delay: 1s;
+    animation: blink-animation 2s linear infinite;
+}
 .nav-item:hover {
     color: #ddd;
 }
@@ -44,22 +56,28 @@ body {
     flex-grow: 1;
 }
 
-.floating-name {
+.container {
+    display: inline-block;
+}
+
+.name{
     font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-weight:bold;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(18), cursor .4s step-end infinite alternate;
 }
 
 .subtitle {
     color: #d4a1cb;
-    font-size: 20px;
-    padding: 0 20px;
+    font-size: 19px;
+    padding: 0 19px;
     box-sizing: border-box;
     display: inline-block;
-    border-right: .15em solid #d4a1cb;
     max-width: 65%;
     margin: 0 auto;
-    white-space: nowrap;
     overflow: hidden;
 }
 
@@ -70,11 +88,20 @@ body {
 }
 
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from { width: 0 }
 }
 
 @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: #d4a1cb; }
 }
+
+@keyframes cursor{
+    50% {border-color: transparent;}
+}
+
+@keyframes blink-animation {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+

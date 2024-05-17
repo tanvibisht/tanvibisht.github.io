@@ -7,30 +7,15 @@
 <body>
     <ul class="nav-bar">
         <li class="nav-item">Home</li>
-        <li class="nav-item">About</li>
         <li class="nav-item">Projects</li>
         <li class="nav-item">Contact Me</li>
     </ul>
-    <div class="floating-name">Tanvi Bisht</div>
-    <div class="subtitle typing"></div> 
+    <div class="container">
+        <p class="name">Tanvi Bisht.</p>
+    </div>
+    <div class="subtitle"> > Currently an undergrate student at the University of Toronto pursuing Mathematics and Computer Science</div> 
+    <div class="blinking-text">Press 'S' to enter Projects</div>
 
-    <script>
-        
-        const subtitleElement = document.querySelector('.subtitle');
-        const text = '> Currently an undergraduate student at the University of Toronto pursuing Mathematics and Computer Science'; 
-
-        let index = 0;
-        function typeWriter() {
-            if (index < text.length) {
-                subtitleElement.innerHTML += text.charAt(index);
-                index++;
-                setTimeout(typeWriter, 60); 
-            } else {
-                subtitleElement.style.borderRight = 'none';
-            }
-        }
-
-        typeWriter();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
